@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EECE-20 Rag Tour • Saint Martin (Jan 11–14, 2026)</title>
+<meta name="description" content="EECE-20 Rag Tour — Saint Martin, Bangladesh • Jan 11–14, 2026. Gallery, Rules & Regulations, and Scroll-synced Timeline."/>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { body: ["Inter", "system-ui", "sans-serif"] },
+      colors: {
+        ocean: {
+          50: "#eff9ff", 100: "#dff2ff", 200: "#bfe6ff", 300: "#94d7ff", 
+          400: "#60c0ff", 500: "#2fa2f0", 600: "#197fc5", 700: "#0f5f94", 
+          800: "#0e4a74", 900: "#0c3c5f"
+        },
+        neon: "#22d3ee",
+        coral: "#ff7b6e",
+        mango: "#f59e0b",
+        grape: "#6366f1",
+        teal: "#14b8a6",
+        sand: "#fde68a",
+        deepOcean: "#1E3A8A",
+        turquoiseWave: "#2DD4BF",
+        coralSunset: "#F87171",
+        sandyShore: "#F5E8C7",
+        seafoamGreen: "#6EE7B7",
+        twilightPurple: "#7C3AED"
+      },
+      boxShadow: {
+        soft: "0 12px 30px rgba(0,0,0,.12)",
+        glow: "0 0 0 8px rgb(34 211 238 / .18)"
+      }
+    }
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+
+<style>
+:root{--nav-h:72px}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,sans-serif;
+  background:
+    radial-gradient(ellipse at top left, rgba(34, 211, 238, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(255, 123, 110, 0.15) 0%, transparent 50%),
+    linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0fdfa 100%);
+  color:#0f172a
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:-100%;
+  z-index:-1;
+  pointer-events:none;
+  opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.glass{
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.08));
+  border:1px solid rgba(255,255,255,.28)
+}
+.section{padding:6rem 0}
+.section-alt{
+  background:linear-gradient(180deg, rgba(224, 242, 254, 0.5) 0%, rgba(240, 253, 250, 0.5) 100%)
+}
+.progress{
+  position:fixed;
+  top:0;left:0;
+  height:3px;width:0;
+  background:linear-gradient(90deg,#2DD4BF,#1E3A8A,#2DD4BF);
+  z-index:60;
+  box-shadow:0 0 12px rgba(45,212,191,.45)
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.8rem 1.1rem;
+  border-radius:9999px;
+  font-weight:700;
+  transition:transform .15s ease, box-shadow .2s ease;
+  background:linear-gradient(135deg, #1E3A8A 0%, #2DD4BF 100%);
+  color:#fff;
+  box-shadow:0 4px 14px rgba(45, 212, 191, 0.3)
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(45, 212, 191, 0.4)
+}
+
+.hero img{
+  transform-origin:center;
+  animation:ken 28s ease-in-out infinite alternate
+}
+@keyframes ken{
+  0%{transform:scale(1)}
+  100%{transform:scale(1.08) translate(1%,-1%)}
+}
+.gradient-text{
+  background:linear-gradient(90deg,#60a5fa,#2DD4BF,#10b981);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent
+}
+
+.reveal{opacity:1;transform:translateY(0);transition:opacity .6s ease, transform .6s ease}
+.reveal.wait{opacity:0;transform:translateY(18px)}
+
+.pulse{
+  background:#F87171;
+  border-radius:9999px;
+  width:14px;height:14px;
+  position:relative;
+  box-shadow:0 0 0 4px rgba(248,113,113,.25)
+}
+.pulse::after{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border:4px solid rgba(248,113,113,.4);
+  border-radius:9999px;
+  animation:pulse 1.8s infinite
+}
+@keyframes pulse{
+  0%{transform:scale(.7);opacity:.7}
+  70%{transform:scale(1.4);opacity:0}
+  100%{opacity:0}
+}
+
+.timeline-shell{height:320vh}
+.snake-stage{position:sticky;top:12vh;height:76vh;overflow:visible}
+#snakeSvg{width:100%;height:100%}
+#snakePath{stroke-dasharray:2600;stroke-dashoffset:2600}
+#snakeDot{filter:drop-shadow(0 6px 14px rgba(45,212,191,.35))}
+.snake-overlay{position:absolute;inset:0;pointer-events:none}
+.node{
+  position:absolute;
+  transform:translate(-50%,-50%) scale(.96);
+  pointer-events:auto;
+  opacity:0;
+  transition:opacity .32s ease, transform .32s ease
+}
+.node.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.card{
+  width:300px;
+  max-width:42vw;
+  background:linear-gradient(135deg, #ffffff 0%, #F5E8C7 100%);
+  border:1px solid rgba(226, 232, 240, 0.8);
+  box-shadow:0 10px 25px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+@media (max-width:1023px){
+  .timeline-shell{height:auto}
+  .snake-stage{position:relative;height:auto}
+}
+.timeline-mobile{display:none}
+@media (max-width:1023px){
+  .timeline-mobile{display:block}
+  .timeline-desktop{display:none}
+}
+
+.swiper-slide{transition:transform .6s ease, opacity .6s ease}
+.swiper-slide-active img{transform:scale(1.05)}
+.gallery-img{transition:transform 6s ease;transform:scale(1.06)}
+.gallery-img:hover{transform:scale(1.08);box-shadow:0 8px 20px rgba(110,231,183,0.3)}
+
+.glightbox-clean .gslide-description{
+  background:rgba(30, 58, 138, 0.9);
+  color:white;
+  padding:20px;
+  border-radius:8px;
+}
+.glightbox-clean .gslide-title{
+  color:white;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+#map-container{
+  width:100%;
+  height:420px;
+  border-radius:1.5rem;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0, 0, 0, 0.1);
+  position:relative;
+}
+#google-map{width:100%;height:100%}
+.map-controls{
+  position:absolute;
+  top:10px;right:10px;
+  z-index:10;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.map-control-btn{
+  background:white;
+  border:none;
+  border-radius:8px;
+  padding:8px 12px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.2);
+  cursor:pointer;
+  font-weight:600;
+  color:#1E3A8A;
+  transition:all 0.2s ease;
+}
+.map-control-btn:hover{
+  background:#F5E8C7;
+  transform:translateY(-1px);
+}
+
+.loading{
+  display:inline-block;
+  width:20px;height:20px;
+  border:3px solid rgba(255,255,255,.3);
+  border-radius:50%;
+  border-top-color:#fff;
+  animation:spin 1s ease-in-out infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.ocean-bg{
+  background:linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(45, 212, 191, 0.1) 100%);
+}
+.beach-bg{
+  background:linear-gradient(135deg, rgba(245, 232, 199, 0.1) 0%, rgba(248, 113, 113, 0.1) 100%);
+}
+.coral-bg{
+  background:linear-gradient(135deg, rgba(248, 113, 113, 0.1) 0%, rgba(110, 231, 183, 0.1) 100%);
+}
+
+.enhanced-card{
+  background:linear-gradient(135deg, #ffffff 0%, #F5E8C7 100%);
+  border:1px solid rgba(226, 232, 240, 0.8);
+  box-shadow:0 10px 25px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.enhanced-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.will-change-transform{will-change:transform}
+.gpu-accelerated{
+  transform:translateZ(0);
+  backface-visibility:hidden;
+  perspective:1000px;
+}
+
+.custom-info-window{
+  font-family:'Inter', sans-serif;
+  max-width:250px;
+}
+.custom-info-window h3{
+  color:#1E3A8A;
+  margin:0 0 5px 0;
+  font-size:18px;
+  font-weight:700;
+}
+.custom-info-window p{
+  margin:0;
+  color:#334155;
+  font-size:14px;
+}
+.custom-info-window .info-window-image{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:4px;
+  margin-bottom:8px;
+}
+
+.pdf-container {
+  width: 100%;
+  height: 600px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.pdf-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.pdf-control-btn {
+  background: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  font-weight: 600;
+  color: #1E3A8A;
+  transition: all 0.2s ease;
+}
+
+.pdf-control-btn:hover {
+  background: #F5E8C7;
+  transform: translateY(-1px);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+}
+
+.image-container img {
+  transition: transform 0.3s ease;
+}
+
+.image-container.zoomed img {
+  transform: scale(1.5);
+  cursor: zoom-out;
+}
+
+.image-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 10px;
+}
+
+.sponsor-card {
+  background: linear-gradient(135deg, #ffffff 0%, #F5E8C7 100%);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sponsor-benefit i {
+  font-size: 1.5rem;
+  color: #2DD4BF;
+  margin-top: 0.25rem;
+}
+
+h2,h3{color:#1E3A8A}
+
+/* Small tweaks for very small screens */
+@media (max-width:480px){
+  h1{font-size:2.3rem}
+  #map-container{height:320px}
+  .pdf-container { height: 400px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Progress -->
+<div id="scrollProgress" class="progress" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mt-3 flex items-center justify-between rounded-2xl glass px-4 py-3 shadow-soft">
+      <a href="#home" class="flex items-center gap-3">
+        <i class="fa-solid fa-water text-deepOcean text-2xl"></i>
+        <span class="font-extrabold tracking-tight">EECE-20 Rag Tour</span>
+      </a>
+      <button id="navToggle" class="lg:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+      <div id="navLinks" class="hidden lg:flex items-center gap-6 text-sm md:text-base">
+        <a class="hover:text-deepOcean transition-colors" href="#about">About</a>
+        <a class="hover:text-deepOcean transition-colors" href="#map">Map</a>
+        <a class="hover:text-deepOcean transition-colors" href="#timeline">Itinerary</a>
+        <a class="hover:text-deepOcean transition-colors" href="#gallery">Gallery</a>
+        <a class="hover:text-deepOcean transition-colors" href="#rules">Rules</a>
+        <a class="hover:text-deepOcean transition-colors" href="#sponsors">Sponsors</a>
+        <a class="hover:text-deepOcean transition-colors" href="#contact">Contact</a>
+      </div>
+    </div>
+    <div id="mobileNav" class="hidden lg:hidden mt-2 rounded-2xl glass shadow-soft px-4 py-3 space-y-2 text-sm">
+      <a class="block py-1.5" href="#about">About</a>
+      <a class="block py-1.5" href="#map">Map</a>
+      <a class="block py-1.5" href="#timeline">Itinerary</a>
+      <a class="block py-1.5" href="#gallery">Gallery</a>
+      <a class="block py-1.5" href="#rules">Rules</a>
+      <a class="block py-1.5" href="#sponsors">Sponsors</a>
+      <a class="block py-1.5" href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-[calc(100vh-0px)] flex items-center justify-center pt-[var(--nav-h)]">
+  <div class="absolute inset-0 -z-10 hero">
+    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1920&auto=format&fit=crop" class="h-full w-full object-cover will-change-transform" alt="">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-white"></div>
+  </div>
+  <div class="mx-auto max-w-5xl px-6 text-center text-white">
+    <p class="mb-3 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 backdrop-blur text-xs sm:text-sm">
+      <i class="fa-solid fa-hashtag"></i> EECE20RagTour
+    </p>
+    <h1 class="text-4xl sm:text-6xl md:text-7xl font-black leading-tight drop-shadow">
+      EECE-20 Rag Tour to <span class="gradient-text">Saint Martin</span>
+    </h1>
+    <p class="mt-4 text-base sm:text-lg md:text-xl opacity-95 max-w-2xl mx-auto">
+      Jan 11–14, 2026 • Bangladesh's only coral island.
+    </p>
+    <p class="mt-3 text-lg sm:text-xl md:text-2xl font-semibold opacity-95 max-w-2xl mx-auto">
+      Top-notch EECE rag tour — comfortable journey, total safety, unlimited fun!
+    </p>
+
+    <!-- COUNTDOWN -->
+    <div class="mt-8 inline-flex flex-wrap items-center justify-center gap-4 rounded-2xl bg-white/95 px-4 py-5 sm:px-6 shadow-soft text-slate-900">
+      <div class="text-center min-w-[60px]">
+        <div id="d" class="text-3xl font-extrabold text-deepOcean">0</div>
+        <div class="text-[10px] uppercase tracking-widest">Days</div>
+      </div>
+      <div class="hidden sm:block h-10 w-px bg-slate-300"></div>
+      <div class="text-center min-w-[60px]">
+        <div id="h" class="text-3xl font-extrabold text-deepOcean">0</div>
+        <div class="text-[10px] uppercase tracking-widest">Hours</div>
+      </div>
+      <div class="hidden sm:block h-10 w-px bg-slate-300"></div>
+      <div class="text-center min-w-[60px]">
+        <div id="m" class="text-3xl font-extrabold text-deepOcean">0</div>
+        <div class="text-[10px] uppercase tracking-widest">Minutes</div>
+      </div>
+      <div class="hidden sm:block h-10 w-px bg-slate-300"></div>
+      <div class="text-center min-w-[60px]">
+        <div id="s" class="text-3xl font-extrabold text-deepOcean">0</div>
+        <div class="text-[10px] uppercase tracking-widest">Seconds</div>
+      </div>
+    </div>
+    <div class="mt-6 text-xs sm:text-sm font-bold opacity-90">
+      From <span class="underline">Jan 11</span> to <span class="underline">Jan 14, 2026</span>
+    </div>
+    <div class="mt-6 flex gap-3 justify-center">
+      <a href="#timeline" class="btn text-sm sm:text-base">
+        <i class="fa-solid fa-timeline"></i> Itinerary
+      </a>
+    </div>
+    <div class="mt-10 text-xs sm:text-sm font-bold opacity-90">
+      <a href="#sponsors" class="text-black hover:text-turquoiseWave transition-colors underline">
+        <i class="fa-solid fa-handshake"></i> We are looking for sponsors
+      </a>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+  <!-- ABOUT -->
+  <section id="about" class="section ocean-bg">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal wait">
+          <h2 class="text-3xl md:text-4xl font-black">The Ultimate Adventure</h2>
+          <p class="mt-4 text-base sm:text-lg leading-relaxed text-slate-700">
+            Reunite on Saint Martin's Island: turquoise water, coral gardens, music nights and beach BBQ.
+          </p>
+          <ul class="mt-6 grid sm:grid-cols-2 gap-4">
+            <li class="enhanced-card rounded-2xl p-5 transition-all">
+              <i class="fa-solid fa-bus text-deepOcean mr-2"></i>
+              <strong>Group Transport</strong>
+              <div class="text-slate-700 mt-1 text-sm sm:text-base">Bus to Teknaf, then boat.</div>
+            </li>
+            <li class="enhanced-card rounded-2xl p-5 transition-all">
+              <i class="fa-solid fa-umbrella-beach text-deepOcean mr-2"></i>
+              <strong>Coral Beaches</strong>
+              <div class="text-slate-700 mt-1 text-sm sm:text-base">Saint Martin & Chera Dwip.</div>
+            </li>
+            <li class="enhanced-card rounded-2xl p-5 transition-all">
+              <i class="fa-solid fa-camera text-deepOcean mr-2"></i>
+              <strong>Photo Moments</strong>
+              <div class="text-slate-700 mt-1 text-sm sm:text-base">#EECE20RagTour gallery.</div>
+            </li>
+            <li class="enhanced-card rounded-2xl p-5 transition-all">
+              <i class="fa-solid fa-music text-deepOcean mr-2"></i>
+              <strong>Bonfire Vibes</strong>
+              <div class="text-slate-700 mt-1 text-sm sm:text-base">Music night & BBQ.</div>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal wait grid grid-cols-2 gap-4">
+          <img class="rounded-2xl shadow-soft hover:shadow-xl transition gpu-accelerated h-40 sm:h-48 w-full object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop" alt="">
+          <img class="rounded-2xl shadow-soft hover:shadow-xl transition gpu-accelerated h-40 sm:h-48 w-full object-cover" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="">
+          <img class="rounded-2xl shadow-soft hover:shadow-xl transition col-span-2 gpu-accelerated h-44 sm:h-60 w-full object-cover" src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1600&auto=format&fit=crop" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section id="map" class="section section-alt beach-bg">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="reveal wait text-center">
+        <h2 class="text-3xl md:text-4xl font-black">Where We're Headed</h2>
+        <p class="mt-3 text-sm sm:text-base text-slate-700">
+          Interactive map showing Saint Martin's Island and nearby attractions.
+        </p>
+      </div>
+      <div class="reveal mt-6 grid lg:grid-cols-[1.2fr_.8fr] gap-8 items-start">
+        <div class="rounded-3xl overflow-hidden shadow-soft border border-slate-200 relative">
+          <div id="map-container">
+            <div id="google-map"></div>
+            <div class="map-controls">
+              <button id="btnZoomIn" class="map-control-btn" title="Zoom In"><i class="fa-solid fa-plus"></i></button>
+              <button id="btnZoomOut" class="map-control-btn" title="Zoom Out"><i class="fa-solid fa-minus"></i></button>
+              <button id="btnReset" class="map-control-btn" title="Reset View"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="enhanced-card rounded-2xl p-6">
+          <h3 class="font-bold text-xl">Trip Snapshot</h3>
+          <ul class="mt-3 space-y-2 text-slate-800 text-sm sm:text-base">
+            <li><i class="fa-regular fa-calendar mr-2 text-deepOcean"></i> Dates: <strong>Jan 11–14, 2026</strong></li>
+            <li><i class="fa-solid fa-location-dot mr-2 text-deepOcean"></i> Destination: <strong>Saint Martin's Island</strong></li>
+            <li><i class="fa-solid fa-hashtag mr-2 text-deepOcean"></i> Tag: <strong>#EECE20RagTour</strong></li>
+          </ul>
+          <a class="btn mt-5 text-sm sm:text-base" href="https://maps.google.com/?q=Saint+Martin+Island+Bangladesh" target="_blank" rel="noopener">
+            <i class="fa-solid fa-route"></i> Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="section coral-bg">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-black">Tour Itinerary</h2>
+        <p class="mt-2 text-sm sm:text-base text-slate-700">
+          Pinned vertical snake, synced to your scroll (longer section for smooth feel).
+        </p>
+      </div>
+
+      <div class="timeline-desktop timeline-shell mt-12 relative" id="timelineShell">
+        <div class="snake-stage" id="snakeStage">
+          <svg id="snakeSvg" viewBox="0 0 800 1240" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradY" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7C3AED"/>
+                <stop offset="50%" stop-color="#2DD4BF"/>
+                <stop offset="100%" stop-color="#F87171"/>
+              </linearGradient>
+            </defs>
+            <path id="snakePath" d="M120,80
+               C120,280 680,280 680,480
+               S120,680 120,880
+               S680,1080 680,1160"
+              fill="none" stroke="url(#gradY)" stroke-width="12" stroke-linecap="round"/>
+            <circle id="snakeDot" r="9" fill="#2DD4BF" cx="120" cy="80"></circle>
+          </svg>
+
+          <div class="snake-overlay" id="snakeOverlay">
+            <div class="node" data-t="0.08">
+              <div class="card rounded-2xl p-5 shadow-soft">
+                <div class="flex items-center gap-3">
+                  <div class="h-12 w-12 grid place-items-center rounded-full bg-twilightPurple/10 text-twilightPurple">
+                    <i class="fa-solid fa-bus"></i>
+                  </div>
+                  <div>
+                    <div class="text-twilightPurple font-extrabold text-sm">Day 1 • Jan 11</div>
+                    <div class="font-bold text-base">Departure</div>
+                  </div>
+                </div>
+                <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1.5">
+                  <li>6:00 PM — Gather at Bus Terminal</li>
+                  <li>8:00 PM — Board bus to Cox Bazar</li>
+                  <li>— Unlimited fun en route</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="node" data-t="0.35">
+              <div class="card rounded-2xl p-5 shadow-soft">
+                <div class="flex items-center gap-3">
+                  <div class="h-12 w-12 grid place-items-center rounded-full bg-turquoiseWave/10 text-turquoiseWave">
+                    <i class="fa-solid fa-ship"></i>
+                  </div>
+                  <div>
+                    <div class="text-turquoiseWave font-extrabold text-sm">Day 2 • Jan 12</div>
+                    <div class="font-bold text-base">Island Exploration</div>
+                  </div>
+                </div>
+                <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1.5">
+                  <li>5:00–5:30 AM — Arrive at Cox Bazar</li>
+                  <li>6:00 AM — Breakfast</li>
+                  <li>7:00 AM — Ship to Saint Martin</li>
+                  <li>2:00 PM — Arrive at Saint Martin</li>
+                  <li>2:00–3:00 PM — Freshen up, relax, lunch</li>
+                <li>6:00–12:00 AM — Beach Exploration</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="node" data-t="0.65">
+              <div class="card rounded-2xl p-5 shadow-soft">
+                <div class="flex items-center gap-3">
+                  <div class="h-12 w-12 grid place-items-center rounded-full bg-coralSunset/10 text-coralSunset">
+                    <i class="fa-solid fa-umbrella-beach"></i>
+                  </div>
+                  <div>
+                    <div class="text-coralSunset font-extrabold text-sm">Day 3 • Jan 13</div>
+                    <div class="font-bold text-base">Island Relaxation</div>
+                  </div>
+                </div>
+                <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1.5">
+                  <li>7:00 AM — Breakfast</li>
+                  <li>9:00 AM — Free beach time</li>
+                  <li>1:00 PM — Lunch</li>
+                  <li>3:00 PM — Optional water sports</li>
+                  <li>7:00 PM — Beach BBQ dinner</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="node" data-t="0.92">
+              <div class="card rounded-2xl p-5 shadow-soft">
+                <div class="flex items-center gap-3">
+                  <div class="h-12 w-12 grid place-items-center rounded-full bg-seafoamGreen/10 text-seafoamGreen">
+                    <i class="fa-solid fa-person-walking-luggage"></i>
+                  </div>
+                  <div>
+                    <div class="text-seafoamGreen font-extrabold text-sm">Day 4 • Jan 14</div>
+                    <div class="font-bold text-base">Return Journey</div>
+                  </div>
+                </div>
+                <ul class="mt-3 text-xs sm:text-sm text-slate-700 space-y-1.5">
+                  <li>7:00 AM — Breakfast & check-out</li>
+                  <li>3:00 PM — Board return ship</li>
+                  <li>9:00 PM — Reach Cox's Bazar</li>
+                  <li>11:00 PM — Board Bus to Dhaka</li>
+                  <li>6:00 AM, 15 Jan — Arrived at Dhaka</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile fallback -->
+      <ol class="timeline-mobile mt-10 relative border-s-2 border-turquoiseWave pl-6 space-y-6">
+        <li class="relative">
+          <div class="absolute -start-2 top-1.5 h-4 w-4 rounded-full bg-turquoiseWave"></div>
+          <h3 class="font-extrabold text-base sm:text-lg">Day 1 • Jan 11 — Departure</h3>
+          <ul class="text-slate-700 text-xs sm:text-sm mt-2 space-y-1.5">
+                  <li>6:00 PM — Gather at Bus Terminal</li>
+                  <li>8:00 PM — Board bus to Cox Bazar</li>
+                  <li>— Unlimited fun en route</li>
+          </ul>
+        </li>
+        <li class="relative">
+          <div class="absolute -start-2 top-1.5 h-4 w-4 rounded-full bg-turquoiseWave"></div>
+          <h3 class="font-extrabold text-base sm:text-lg">Day 2 • Jan 12 — Island Exploration</h3>
+          <ul class="text-slate-700 text-xs sm:text-sm mt-2 space-y-1.5">
+                  <li>5:00–5:30 AM — Arrive at Cox Bazar</li>
+                  <li>6:00 AM — Breakfast</li>
+                  <li>7:00 AM — Ship to Saint Martin</li>
+                  <li>2:00 PM — Arrive at Saint Martin</li>
+                  <li>2:00–3:00 PM — Freshen up, relax, lunch</li>
+                <li>6:00–12:00 AM — Beach Exploration</li>
+          </ul>
+        </li>
+        <li class="relative">
+          <div class="absolute -start-2 top-1.5 h-4 w-4 rounded-full bg-turquoiseWave"></div>
+          <h3 class="font-extrabold text-base sm:text-lg">Day 3 • Jan 13 — Island Relaxation</h3>
+          <ul class="text-slate-700 text-xs sm:text-sm mt-2 space-y-1.5">
+                  <li>7:00 AM — Breakfast</li>
+                  <li>9:00 AM — Free beach time</li>
+                  <li>1:00 PM — Lunch</li>
+                  <li>3:00 PM — Optional water sports</li>
+                  <li>7:00 PM — Beach BBQ dinner</li>
+          </ul>
+        </li>
+        <li class="relative">
+          <div class="absolute -start-2 top-1.5 h-4 w-4 rounded-full bg-turquoiseWave"></div>
+          <h3 class="font-extrabold text-base sm:text-lg">Day 4 • Jan 14 — Return Journey</h3>
+          <ul class="text-slate-700 text-xs sm:text-sm mt-2 space-y-1.5">
+            <li>7:00 AM — Breakfast & check-out</li>
+            <li>3:00 PM — Board return ship</li>
+            <li>9:00 PM — Reach Cox's Bazar</li>
+            <li>11:00 PM — Board Bus to Dhaka</li>
+            <li>6:00 AM, 15 Jan — Arrived at Dhaka</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section ocean-bg">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="reveal wait text-center">
+        <h2 class="text-3xl md:text-4xl font-black">Photo Gallery</h2>
+        <p class="mt-3 text-sm sm:text-base text-slate-700">
+          Click on any image to view in full screen with popup effect.
+        </p>
+      </div>
+
+      <div class="reveal wait mt-10 swiper" aria-label="Photo Carousel">
+        <div class="swiper-wrapper" id="galleryWrapper">
+          <div class="swiper-slide">
+            <a href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop" class="glightbox" data-gallery="gallery1" data-description="Beautiful ocean view at Saint Martin">
+              <img class="h-64 sm:h-72 w-full rounded-2xl object-cover gallery-img gpu-accelerated" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop" alt="Ocean">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=2000&auto=format&fit=crop" class="glightbox" data-gallery="gallery1" data-description="Friends enjoying the beach">
+              <img class="h-64 sm:h-72 w-full rounded-2xl object-cover gallery-img gpu-accelerated" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1600&auto=format&fit=crop" alt="Friends">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=2000&auto=format&fit=crop" class="glightbox" data-gallery="gallery1" data-description="Coral reef at Saint Martin">
+              <img class="h-64 sm:h-72 w-full rounded-2xl object-cover gallery-img gpu-accelerated" src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1600&auto=format&fit=crop" alt="Reef">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://images.unsplash.com/photo-1540202404-1b927524ba28?q=80&w=2000&auto=format&fit=crop" class="glightbox" data-gallery="gallery1" data-description="Sunset at the beach">
+              <img class="h-64 sm:h-72 w-full rounded-2xl object-cover gallery-img gpu-accelerated" src="https://images.unsplash.com/photo-1540202404-1b927524ba28?q=80&w=1600&auto=format&fit=crop" alt="Sunset">
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=2000&auto=format&fit=crop" class="glightbox" data-gallery="gallery1" data-description="Tropical paradise">
+              <img class="h-64 sm:h-72 w-full rounded-2xl object-cover gallery-img gpu-accelerated" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1600&auto=format&fit=crop" alt="Tropical">
+            </a>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev" aria-label="Previous Slide"></div>
+        <div class="swiper-button-next" aria-label="Next Slide"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RULES & REGULATIONS -->
+<section id="rules" class="section section-alt beach-bg">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="reveal wait text-center">
+      <h2 class="text-3xl md:text-4xl font-black">Rules & Regulations</h2>
+      <p class="mt-3 text-sm sm:text-base text-slate-700">
+        Please review the tour guidelines to ensure a safe and enjoyable experience for everyone. The rules have been overlooked and approved by everyone of  with final approval by DR of EECE-20.
+      </p>
+    </div>
+
+    <div class="reveal mt-10 grid lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2">
+        <div class="image-container rounded-2xl overflow-hidden shadow-soft relative">
+          <img src="rules.png" 
+               alt="EECE-20 Rag Tour Rules & Regulations" 
+               class="w-full h-auto object-cover">
+          <div class="image-controls">
+            <button id="btnZoom" class="pdf-control-btn" title="Zoom">
+              <i class="fa-solid fa-search-plus"></i>
+            </button>
+            <a href="https://drive.google.com/file/d/1Hdcxq3plk8BjDtR_SLmE-5Uzmj1G7bHg/view?usp=sharing" 
+               target="_blank" 
+               class="pdf-control-btn" 
+               title="Download">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="enhanced-card rounded-2xl p-6">
+          <h3 class="font-bold text-xl mb-4">Key Guidelines</h3>
+          <ul class="space-y-3 text-sm sm:text-base text-slate-700">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-deepOcean mt-0.5"></i>
+              <span>All participants must follow the tour schedule</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-deepOcean mt-0.5"></i>
+              <span>Respect local customs and environment</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-deepOcean mt-0.5"></i>
+              <span>Stay with the group during activities</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-deepOcean mt-0.5"></i>
+              <span>No alcohol or illegal substances</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-deepOcean mt-0.5"></i>
+              <span>Keep the beaches clean</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="enhanced-card rounded-2xl p-6">
+          <h3 class="font-bold text-xl mb-4">Contact for Questions</h3>
+          <p class="text-sm sm:text-base text-slate-700 mb-4">
+            If you have any questions about the rules or need clarification, please contact the organizing committee.
+          </p>
+          <a href="#contact" class="btn text-sm sm:text-base w-full justify-center">
+            <i class="fa-solid fa-phone"></i> Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- SPONSORS -->
+  <section id="sponsors" class="section section-alt ocean-bg">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="reveal wait text-center">
+        <h2 class="text-3xl md:text-4xl font-black">Partner With Us</h2>
+        <p class="mt-3 text-sm sm:text-base text-slate-700">
+          Join us in creating unforgettable memories at Saint Martin's Island. Your support helps make this amazing experience possible for all EECE-20 students.
+        </p>
+      </div>
+
+      <div class="reveal mt-10 grid lg:grid-cols-2 gap-8">
+        <div class="space-y-6">
+          <div class="sponsor-card p-6">
+            <h3 class="font-bold text-xl mb-4 text-deepOcean">Marketing Strategy</h3>
+            <p class="text-slate-700 mb-4">
+              Partnering with EECE-20 Rag Tour offers unique brand exposure opportunities to our vibrant student community and beyond.
+            </p>
+            
+            <div class="space-y-4">
+              <div class="sponsor-benefit">
+                <i class="fa-solid fa-share-nodes"></i>
+                <div>
+                  <h4 class="font-semibold">Social Media Presence</h4>
+                  <p class="text-sm text-slate-600">Regular posts featuring your brand across all our social platforms with hashtag #EECE20RagTour reaching thousands of students and alumni.</p>
+                </div>
+              </div>
+              
+              <div class="sponsor-benefit">
+                <i class="fa-solid fa-flag"></i>
+                <div>
+                  <h4 class="font-semibold">Tour Visibility</h4>
+                  <p class="text-sm text-slate-600">Mini banners displayed throughout the tour, including on transportation, accommodation, and at key event locations.</p>
+                </div>
+              </div>
+              
+              <div class="sponsor-benefit">
+                <i class="fa-solid fa-hat-cowboy"></i>
+                <div>
+                  <h4 class="font-semibold">Branded Merchandise</h4>
+                  <p class="text-sm text-slate-600">Your logo prominently featured on tour merchandise including caps, t-shirts, and other items worn by all participants.</p>
+                </div>
+              </div>
+              
+              <div class="sponsor-benefit">
+                <i class="fa-solid fa-tshirt"></i>
+                <div>
+                  <h4 class="font-semibold">Custom Apparel</h4>
+                  <p class="text-sm text-slate-600">Exclusive tour t-shirts with your company logo, creating walking billboards that extend brand reach beyond the tour.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="sponsor-card p-6">
+            <h3 class="font-bold text-xl mb-4 text-deepOcean">Sponsorship Tiers</h3>
+            
+            <div class="space-y-4">
+              <div class="border-l-4 border-turquoiseWave pl-4">
+                <h4 class="font-semibold">Platinum Partner</h4>
+                <p class="text-sm text-slate-600">Maximum brand visibility across all platforms, exclusive merchandise rights, and prominent logo placement.</p>
+              </div>
+              
+              <div class="border-l-4 border-coralSunset pl-4">
+                <h4 class="font-semibold">Gold Sponsor</h4>
+                <p class="text-sm text-slate-600">Enhanced visibility on social media, branded merchandise, and featured placement in tour materials.</p>
+              </div>
+              
+              <div class="border-l-4 border-seafoamGreen pl-4">
+                <h4 class="font-semibold">Silver Supporter</h4>
+                <p class="text-sm text-slate-600">Logo inclusion in tour materials, social media mentions, and merchandise placement.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sponsor-card p-6">
+            <h3 class="font-bold text-xl mb-4 text-deepOcean">Why Partner With Us?</h3>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-turquoiseWave mt-1"></i>
+                <span>Direct access to 150+ engineering students and alumni network</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-turquoiseWave mt-1"></i>
+                <span>Positive brand association with educational development and student activities</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-turquoiseWave mt-1"></i>
+                <span>Long-term visibility through photos and videos shared across social platforms</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-check text-turquoiseWave mt-1"></i>
+                <span>Opportunity to showcase products/services in natural, engaging settings</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal mt-8 text-center">
+        <a href="#contact" class="btn text-sm sm:text-base">
+          <i class="fa-solid fa-handshake"></i> Become a Sponsor
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt ocean-bg">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="rounded-3xl p-8 sm:p-10" style="background: linear-gradient(135deg,#1E3A8A 0%, #0f5f94 60%, #1E3A8A 100%);">
+        <h2 class="reveal wait text-3xl md:text-4xl font-black text-center text-white">Contact</h2>
+        <div class="mt-10 sm:mt-12">
+          <div class="reveal wait">
+            <h3 class="font-bold text-xl mb-4 text-white">Organizing Committee</h3>
+            <ul class="space-y-4 text-sm sm:text-base">
+              
+          <li class="flex gap-3 text-white">
+                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
+                <div>
+                  <div class="font-bold">Minhaj Abedin Siam</div>
+                  <div class="text-white/95">Chief Tour Organizer</div>
+                  <a href="mailto:minhajabedinsiam144@gmail.com" class="social-icon email">minhajabedinsiam144@gmail.com</a>
+                </div>
+              </li>
+          <li class="flex gap-3 text-white">
+                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
+                <div>
+                  <div class="font-bold">Md. Raisul Islam Romel</div>
+                  <div class="text-white/95">Planning, Routing, Finance & Website</div>
+                  <a href="mailto:raisulislamromel1@gmail.com" class="social-icon email">raisulislamromel1@gmail.com</a>
+                </div>
+              </li>
+              <li class="flex gap-3 text-white">
+                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
+                <div>
+                  <div class="font-bold">Irtiza Mohtasim</div>
+                  <div class="text-white/95">Accomodation and Planning</div>
+                </div>
+              </li>
+              <li class="flex gap-3 text-white">
+                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
+                <div>
+                  <div class="font-bold">Farhan Saquib</div>
+                  <div class="text-white/95">Public Safety & DR</div>
+                </div>
+              </li>
+              <li class="flex gap-3 text-white">
+                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
+                <div>
+                  <div class="font-bold">Uddhab Saha</div>
+                  <div class="text-white/95">The person everyone fears the most😨</div>
+                </div>
+              </li>
+              <li class="flex gap-3 text-white">
+                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
+                <div>
+                  <div class="font-bold">Sabya</div>
+                  <div class="text-white/95">Moderator</div>
+                </div>
+              </li>
+              <li class="flex gap-3 text-white">
+                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
+                <div>
+                  <div class="font-bold">Saadman Sababh</div>
+                  <div class="text-white/95">Mawlana Shaheb</div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="py-8 sm:py-10 bg-gradient-to-r from-deepOcean to-turquoiseWave text-white text-sm sm:text-base">
+  <div class="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
+    <div class="text-white/90">© 2026 EECE-20 Batch. All rights reserved.</div>
+    <div class="text-white/90">Share memories via <strong>#EECE20RagTour</strong></div>
+  </div>
+</footer>
+
+<button id="backTop" class="fixed bottom-5 right-5 z-40 hidden rounded-full bg-white p-3 shadow-soft text-deepOcean border border-slate-300" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- Libs -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+// ------- Performance helper -------
+const runWhenIdle = (callback) => {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(callback);
+  } else {
+    setTimeout(callback, 1);
+  }
+};
+
+// ------- Utilities -------
+const $ = sel => document.querySelector(sel);
+const $$ = sel => document.querySelectorAll(sel);
+
+// Mobile nav
+ $('#navToggle')?.addEventListener('click', () => {
+  const m = $('#mobileNav'); 
+  m.classList.toggle('hidden');
+  $('#navToggle').setAttribute('aria-expanded', m.classList.contains('hidden') ? 'false' : 'true');
+});
+
+// Reveal on scroll
+const revealElements = $$('.reveal.wait');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove('wait');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+runWhenIdle(() => {
+  revealElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      revealObserver.observe(el);
+    } else {
+      setTimeout(() => revealObserver.observe(el), 100);
+    }
+  });
+});
+
+// Progress + back to top (smooth)
+const backTop = $('#backTop'); 
+let needsBar = false;
+let lastScrollTime = 0;
+const throttleDelay = 16;
+
+function onScroll() {
+  const now = performance.now();
+  if (now - lastScrollTime >= throttleDelay) {
+    needsBar = true;
+    backTop.classList.toggle('hidden', scrollY < 500);
+    lastScrollTime = now;
+  }
+}
+addEventListener('scroll', onScroll, {passive: true});
+
+function barLoop() {
+  if (needsBar) {
+    needsBar = false;
+    const docH = document.body.scrollHeight - innerHeight;
+    $('#scrollProgress').style.width = (docH > 0 ? (scrollY / docH) * 100 : 0) + '%';
+  }
+  requestAnimationFrame(barLoop);
+}
+barLoop();
+backTop.addEventListener('click', () => scrollTo({top: 0, behavior: 'smooth'}));
+
+// Countdown — Jan 11, 2026 00:00 local
+const target = new Date('2026-01-11T20:00:00').getTime();
+function tick() {
+  const now = Date.now(), dist = Math.max(0, target - now);
+  const d = Math.floor(dist / 86400000);
+  const h = Math.floor((dist % 86400000) / 3600000);
+  const m = Math.floor((dist % 3600000) / 60000);
+  const s = Math.floor((dist % 60000) / 1000);
+  [['#d', d], ['#h', h], ['#m', m], ['#s', s]].forEach(([id, val]) => {
+    const el = $(id);
+    if (el) el.textContent = val;
+  });
+}
+tick();
+setInterval(tick, 1000);
+
+// Google Maps
+let map, saintMartinMarker, infoWindow;
+function initMap() {
+  try {
+    const saintMartin = { lat: 20.6275, lng: 92.3226 };
+    map = new google.maps.Map(document.getElementById('google-map'), {
+      zoom: 12,
+      center: saintMartin,
+      mapTypeId: 'hybrid',
+      styles: [
+        { featureType: "water", elementType: "geometry", stylers: [{ color: "#2DD4BF" }] },
+        { featureType: "landscape.man_made", elementType: "geometry", stylers: [{ color: "#F5E8C7" }] }
+      ],
+      disableDefaultUI: true,
+      zoomControl: false,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      rotateControl: false,
+      fullscreenControl: false
+    });
+
+    infoWindow = new google.maps.InfoWindow({
+      content: `
+        <div class="custom-info-window">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400&auto=format&fit=crop" class="info-window-image" alt="Saint Martin Island">
+          <h3>Saint Martin's Island</h3>
+          <p>Bangladesh's only coral island and perfect destination for our EECE-20 Rag Tour!</p>
+        </div>
+      `
+    });
+
+    saintMartinMarker = new google.maps.Marker({
+      position: saintMartin,
+      map: map,
+      title: "Saint Martin's Island",
+      animation: google.maps.Animation.DROP,
+      icon: {
+        url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+          <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" fill="#2DD4BF" stroke="#ffffff" stroke-width="2"/>
+            <circle cx="20" cy="20" r="8" fill="#ffffff"/>
+          </svg>
+        `),
+        scaledSize: new google.maps.Size(40, 40)
+      }
+    });
+
+    saintMartinMarker.addListener('click', () => {
+      infoWindow.open(map, saintMartinMarker);
+    });
+
+    const nearbyLocations = [
+      { lat: 20.581389, lng: 92.337278, name: "Chera Dwip", description: "Small island connected to Saint Martin at low tide" },
+      { lat: 20.6170, lng: 92.3170, name: "Sea Beach", description: "Main beach area with crystal clear water" },
+      { lat: 20.622770850929307, lng: 92.32631830427138, name: "Our Resort", description: "Perfect spot for snorkeling and coral viewing" }
+    ];
+
+    nearbyLocations.forEach(location => {
+      const marker = new google.maps.Marker({
+        position: { lat: location.lat, lng: location.lng },
+        map: map,
+        title: location.name,
+        icon: {
+          url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+            <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="15" cy="15" r="13" fill="#F87171" stroke="#ffffff" stroke-width="2"/>
+              <circle cx="15" cy="15" r="6" fill="#ffffff"/>
+            </svg>
+          `),
+          scaledSize: new google.maps.Size(30, 30)
+        }
+      });
+
+      const locationInfoWindow = new google.maps.InfoWindow({
+        content: `
+          <div class="custom-info-window">
+            <h3>${location.name}</h3>
+            <p>${location.description}</p>
+          </div>
+        `
+      });
+
+      marker.addListener('click', () => {
+        locationInfoWindow.open(map, marker);
+      });
+    });
+
+    document.getElementById('btnZoomIn').addEventListener('click', () => {
+      map.setZoom(map.getZoom() + 1);
+    });
+
+    document.getElementById('btnZoomOut').addEventListener('click', () => {
+      map.setZoom(map.getZoom() - 1);
+    });
+
+    document.getElementById('btnReset').addEventListener('click', () => {
+      map.setCenter(saintMartin);
+      map.setZoom(12);
+    });
+  } catch (error) {
+    console.error('Error initializing map:', error);
+    showMapError();
+  }
+}
+
+function showMapError() {
+  const mapContainer = document.getElementById('map-container');
+  mapContainer.innerHTML = `
+    <div class="flex flex-col items-center justify-center h-full bg-white">
+      <i class="fa-solid fa-map-marked-alt text-4xl mb-4 text-deepOcean"></i>
+      <p class="font-semibold text-slate-800">Unable to load map</p>
+      <p class="text-sm mt-2 text-slate-500">Please check your internet connection</p>
+      <button class="btn mt-4" onclick="location.reload()">
+        <i class="fa-solid fa-rotate-right"></i> Retry
+      </button>
+    </div>
+  `;
+}
+
+setTimeout(() => {
+  if (!window.google || !window.google.maps) {
+    showMapError();
+  }
+}, 5000);
+
+window.initMap = initMap;
+
+// Gallery (smooth, responsive)
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  grabCursor: true,
+  autoplay: { delay: 2500, disableOnInteraction: false, pauseOnMouseEnter: true },
+  effect: 'fade',
+  fadeEffect: { crossFade: true },
+  speed: 600,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  breakpoints: {
+    640: { slidesPerView: 2, effect: 'slide' },
+    1024: { slidesPerView: 3, effect: 'slide' }
+  },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true
+});
+
+runWhenIdle(() => {
+  GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true,
+    plyr: {
+      config: {
+        ratio: '16:9',
+        muted: false,
+        hideControls: true,
+        youtube: { noCookie: true, rel: 0, showinfo: 0, iv_load_policy: 3 },
+        vimeo: { byline: false, portrait: false, title: false, speed: true, transparent: false }
+      }
+    }
+  });
+});
+
+// Image zoom functionality
+document.getElementById('btnZoom')?.addEventListener('click', function() {
+  const container = document.querySelector('.image-container');
+  container.classList.toggle('zoomed');
+  
+  if (container.classList.contains('zoomed')) {
+    this.innerHTML = '<i class="fa-solid fa-search-minus"></i>';
+    this.title = 'Zoom Out';
+  } else {
+    this.innerHTML = '<i class="fa-solid fa-search-plus"></i>';
+    this.title = 'Zoom';
+  }
+});
+
+// --------- Scroll-synced snake timeline ---------
+const snakeShell = document.getElementById('timelineShell');
+const snakeStage = document.getElementById('snakeStage');
+const snakeSvg = document.getElementById('snakeSvg');
+const snakePath = document.getElementById('snakePath');
+const snakeDot = document.getElementById('snakeDot');
+const overlay = document.getElementById('snakeOverlay');
+
+let nodePositions = [];
+function positionNodes() {
+  if (!snakePath || !snakeSvg || !overlay) return;
+  const vb = snakeSvg.viewBox.baseVal;
+  const total = snakePath.getTotalLength ? snakePath.getTotalLength() : 2600;
+  
+  nodePositions = [];
+  overlay.querySelectorAll('.node').forEach((node) => {
+    const t = parseFloat(node.dataset.t || '0');
+    const pt = snakePath.getPointAtLength(total * t);
+    const xPct = (pt.x - vb.x) / vb.width * 100;
+    const yPct = (pt.y - vb.y) / vb.height * 100;
+    
+    nodePositions.push({ element: node, x: xPct, y: yPct, t: t });
+    node.style.left = xPct + '%';
+    node.style.top = yPct + '%';
+  });
+}
+
+document.addEventListener('DOMContentLoaded', positionNodes);
+window.addEventListener('resize', positionNodes);
+
+let needSnake = false;
+let lastSnakeTime = 0;
+
+function snakeUpdate() {
+  if (!snakePath || nodePositions.length === 0 || !snakeShell) return;
+  const total = snakePath.getTotalLength ? snakePath.getTotalLength() : 2600;
+  const shellTop = snakeShell.offsetTop;
+  const shellEnd = shellTop + snakeShell.offsetHeight - innerHeight;
+  let p = (scrollY - shellTop) / (shellEnd - shellTop);
+  p = Math.min(1, Math.max(0, p));
+
+  requestAnimationFrame(() => {
+    snakePath.style.strokeDasharray = total;
+    snakePath.style.strokeDashoffset = total * (1 - p);
+    const pt = snakePath.getPointAtLength(total * p);
+    snakeDot.setAttribute('cx', pt.x);
+    snakeDot.setAttribute('cy', pt.y);
+    nodePositions.forEach(({ element, t }) => {
+      if (p >= t - 0.02) element.classList.add('visible');
+      else element.classList.remove('visible');
+    });
+  });
+}
+
+function onSnakeScroll() {
+  const now = performance.now();
+  if (now - lastSnakeTime >= throttleDelay) {
+    needSnake = true;
+    lastSnakeTime = now;
+  }
+}
+
+addEventListener('scroll', onSnakeScroll, {passive: true});
+
+(function loop() {
+  if (needSnake) {
+    needSnake = false;
+    snakeUpdate();
+  }
+  requestAnimationFrame(loop);
+})();
+
+window.addEventListener('load', () => {
+  positionNodes();
+  snakeUpdate();
+});
+</script>
+
+<!-- Google Maps API -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
+</body>
+</html>
