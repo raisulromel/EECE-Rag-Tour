@@ -432,6 +432,103 @@ h2,h3{color:#1E3A8A}
 .sponsor-card {
   contain: layout style paint;
 }
+
+/* Committee Member Styles - Adapted to match theme */
+.committee-section {
+  padding: 5rem 1.5rem;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(58, 236, 212, 0.12), transparent 50%),
+    linear-gradient(135deg, #52cdeb, #05578e);
+  color: #ffffff;
+  position: relative;
+}
+
+.committee-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.committee-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.committee-card {
+  background: linear-gradient(145deg, rgba(71, 125, 202, 0.8), rgba(55, 200, 219, 0.9));
+  border-radius: 18px;
+  padding: 2rem 1.6rem;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,.4);
+  cursor: pointer;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(.22,.61,.36,1), box-shadow 0.75s ease;
+  will-change: transform;
+}
+
+.committee-card:hover,
+.committee-card:focus-within,
+.committee-card:active {
+  transform: rotateY(12deg) translateY(-10px) scale(1.04);
+  box-shadow: 0 26px 55px rgba(150, 81, 187, 0.35);
+}
+
+.committee-card > * {
+  transform: translateZ(30px);
+}
+
+.avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2DD4BF, #1E3A8A);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #f28d8d;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 0 0 6px rgba(45,212,191,.15);
+}
+
+.committee-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: .3rem;
+  color: #000000;
+}
+
+.committee-role {
+  font-weight: 600;
+  color: #dc0808;
+  margin-bottom: .6rem;
+}
+
+.committee-email {
+  font-size: .95rem;
+  color: rgba(25, 16, 16, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.committee-email:hover {
+  color: #2DD4BF;
+}
+
+@media (hover: none) {
+  .committee-card:active {
+    transform: rotateY(10deg) translateY(-8px) scale(1.03);
+  }
+}
 </style>
 </head>
 <body>
@@ -457,7 +554,7 @@ h2,h3{color:#1E3A8A}
         <a class="hover:text-deepOcean transition-colors" href="#gallery">Gallery</a>
         <a class="hover:text-deepOcean transition-colors" href="#rules">Rules</a>
         <a class="hover:text-deepOcean transition-colors" href="#sponsors">Sponsors</a>
-        <a class="hover:text-deepOcean transition-colors" href="#contact">Contact</a>
+        <a class="hover:text-deepOcean transition-colors" href="#contact">Organizer</a>
       </div>
     </div>
     <div id="mobileNav" class="hidden lg:hidden mt-2 rounded-2xl glass shadow-soft px-4 py-3 space-y-2 text-sm">
@@ -467,7 +564,7 @@ h2,h3{color:#1E3A8A}
       <a class="block py-1.5" href="#gallery">Gallery</a>
       <a class="block py-1.5" href="#rules">Rules</a>
       <a class="block py-1.5" href="#sponsors">Sponsors</a>
-      <a class="block py-1.5" href="#contact">Contact</a>
+      <a class="block py-1.5" href="#contact">Organizer</a>
     </div>
   </nav>
 </header>
@@ -996,106 +1093,94 @@ h2,h3{color:#1E3A8A}
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section section-alt ocean-bg">
+  <!-- CONTACT - COMMITTEE SECTION -->
+  <section id="contact" class="committee-section">
     <div class="mx-auto max-w-7xl px-6">
-      <div class="rounded-3xl p-8 sm:p-10" style="background: linear-gradient(135deg,#1E3A8A 0%, #0f5f94 60%, #1E3A8A 100%);">
-        <h2 class="reveal wait text-3xl md:text-4xl font-black text-center text-white">Contact</h2>
-        <div class="mt-10 sm:mt-12">
-          <div class="reveal wait">
-            <h3 class="font-bold text-xl mb-4 text-white">Organizing Committee</h3>
-            <ul class="space-y-4 text-sm sm:text-base">
-              
-          <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold">Minhaj Abedin Siam</div>
-                  <div class="text-red-500">Chief Tour Organizer</div>
-                  <a href="mailto:minhajabedinsiam144@gmail.com" class="social-icon email">minhajabedinsiam144@gmail.com</a>
-                </div>
-              </li>
-          <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold">Raisul Islam Romel</div>
-                  <div class="text-red-500">Routing, Finance & 
-                    <span class="text-red-600 font-semibold">Website</span>
-                  </div>
-                  <a href="mailto:raisulislamromel1@gmail.com" class="social-icon email">raisulislamromel1@gmail.com</a>
-                </div>
-              </li>
-              <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold"> Raisul Islam Ratul</div>
-                  <div class="text-red-500"> Design and Sponsors Head</div>
-                  <a href="mailto:ratulraisul3@gmail.com" class="social-icon email">ratulraisul3@gmail.com</a>
-                </div>
-              </li>
-              <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold">Irtiza Mohtasim</div>
-                  <div class="text-red-500">Accomodation and Planning</div>
-                </div>
-              </li>
-              <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold">Farhan Saquib</div>
-                  <div class="text-red-500">Public Safety & DR</div>
-                </div>
-              </li>
-            
-              <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold">Sabyasachi</div>
-                  <div class="text-red-500">Moderator and Grok Expert</div>
-                </div>
-              </li>
-              <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold">Pretom Das</div>
-                  <div class="text-red-500">Special Committee Member</div>
-                </div>
-              </li>
+      <div class="reveal wait text-center">
+        <h2 class="text-3xl md:text-4xl font-black text-white">Meet Our Organizing Committee</h2>
+        <p class="mt-3 text-sm sm:text-base text-white/80">
+          The dedicated team behind the EECE-20 Rag Tour to Saint Martin.
+        </p>
+      </div>
 
-              <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold">Zakia Sultana Simin</div>
-                  <div class="text-red-500">Social Media Head</div>
-                </div>
-              </li>
-
-              <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold">Saadman Sababh</div>
-                  <div class="text-red-500">Mawlana Shaheb</div>
-                </div>
-              </li>
-
-              <li class="flex gap-3 text-white">
-                <i class="fa-solid fa-user-circle text-2xl text-seafoamGreen"></i>
-                <div>
-                  <div class="font-bold">Uddhab Saha</div>
-                  <div class="text-white/95">The person everyone fears the most😨</div>
-                </div>
-              </li>
-
-            </ul>
-          </div>
-          
-          <div class="reveal mt-8 text-center">
-            <h3 class="font-bold text-xl mb-4 text-white">Follow Our Batch Facebook Page</h3>
-            <a href="https://www.facebook.com/profile.php?id=61584618520891" target="_blank" class="btn btn-white text-sm sm:text-base">
-              <i class="fa-brands fa-facebook"></i> EECE-20 Batch Page
-            </a>
-          </div>
+      <div class="committee-grid mt-12">
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">M</div>
+          <h3>Minhaj Abedin Siam</h3>
+          <div class="committee-role">Chief Tour Organizer</div>
+          <a class="committee-email" href="mailto:minhajabedinsiam144@gmail.com">
+            minhajabedinsiam144@gmail.com
+          </a>
         </div>
+
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">R</div>
+          <h3>Raisul Islam Romel</h3>
+          <div class="committee-role">
+            Routing, Finance & <span style="color:#ffcbcb">Website</span>
+          </div>
+          <a class="committee-email" href="mailto:raisulislamromel1@gmail.com">
+            raisulislamromel1@gmail.com
+          </a>
+        </div>
+
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">R</div>
+          <h3>Raisul Islam Ratul</h3>
+          <div class="committee-role">Design & Sponsors Head</div>
+          <a class="committee-email" href="mailto:ratulraisul3@gmail.com">
+            ratulraisul3@gmail.com
+          </a>
+        </div>
+
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">I</div>
+          <h3>Irtiza Mohtasim</h3>
+          <div class="committee-role">Accommodation & Planning</div>
+        </div>
+
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">F</div>
+          <h3>Farhan Saquib</h3>
+          <div class="committee-role">Public Safety & DR</div>
+        </div>
+
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">S</div>
+          <h3>Sabyasachi</h3>
+          <div class="committee-role">Moderator & Grok Expert</div>
+        </div>
+
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">P</div>
+          <h3>Pretom Das</h3>
+          <div class="committee-role">Special Committee Member</div>
+        </div>
+
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">Z</div>
+          <h3>Zakia Sultana Simin</h3>
+          <div class="committee-role">Social Media Head</div>
+        </div>
+
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">S</div>
+          <h3>Saadman Sababh</h3>
+          <div class="committee-role">Mawlana Shaheb</div>
+        </div>
+
+        <div class="committee-card" tabindex="0">
+          <div class="avatar">U</div>
+          <h3>Uddhab Saha</h3>
+          <div class="committee-role">The person everyone fears the most 😨</div>
+        </div>
+      </div>
+      
+      <div class="reveal mt-12 text-center">
+        <h3 class="font-bold text-xl mb-4 text-white">Follow Our Batch Facebook Page</h3>
+        <a href="https://www.facebook.com/profile.php?id=61584618520891" target="_blank" class="btn btn-white text-sm sm:text-base">
+          <i class="fa-brands fa-facebook"></i> EECE-20 Batch Page
+        </a>
       </div>
     </div>
   </section>
